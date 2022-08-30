@@ -22,7 +22,8 @@ app.get("/api/users", usersHandlers.getUsers);
 app.get("/api/users/:id", usersHandlers.getUsersById);
 app.put("/api/users/:id", usersHandlers.updateUsers);
 app.put("/api/movies/:id", movieHandlers.updateMovies);
-
+ app.delete("/api/movies/:id", movieHandlers.deleteMovie);
+ app.delete("/api/users/:id", usersHandlers.deleteUsers);
 
 app.listen(port, (err) => {
   if (err) {
